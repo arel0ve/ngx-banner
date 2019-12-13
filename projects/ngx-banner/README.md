@@ -1,24 +1,57 @@
 # NgxBanner
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+Simple service to display information banner on the top of the screen
 
-## Code scaffolding
+## Using
 
-Run `ng generate component component-name --project ngx-banner` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-banner`.
-> Note: Don't forget to add `--project ngx-banner` or else it will be added to the default project in your `angular.json` file. 
+Import NgxBannerModule to your main module, for example, to *app.module.ts*:
+```
+   ...
+   import { NgxBannerModule } from 'ngx-banner';
+   ...
+   
+   @NgModule({
+     ...
+     imports: [
+       ...
+       NgxBannerModule,
+       ...
+     ],
+     ...
+   })
+ ```
+Declare NgxBannerService in target component:
+```
+  ...
+  import { NgxBannerService } from 'ngx-banner';
+  ...
+  
+  @Component({
+    selector: '<component selector>',
+  })
+  export class <ComponentName> {
+  
+    ...
+  
+    constructor(
+      ...
+      private readonly ngxBannerService: NgxBannerService,
+      ...
+      ) {
+        ...
+      }
+  }
+```
+Using inside target component (everywhere, ngxBannerService should be declared in target component constructor before):
+```
+  ...
+  this.ngxBannerService.showBanner({type: 'info', title: 'Banner works', debounceTime: 3000});
+  ...
+```
 
-## Build
+## showBanner method configuration
 
-Run `ng build ngx-banner` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ngx-banner`, go to the dist folder `cd dist/ngx-banner` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-banner` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For now showBanner method has simple configuration:
+1. `type: 'info' | 'warning' | 'danger'`: banner style: `*info means blue*, *warning means yellow*, *danger means red*.' 
+2. `tilte: string`: text that will be displays on banner.
+3. `debounceTime: number`: time in *ms*, after which banner will be hidden.

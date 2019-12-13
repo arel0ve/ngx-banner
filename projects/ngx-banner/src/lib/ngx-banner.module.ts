@@ -5,9 +5,9 @@ import { NgxBannerService } from './ngx-banner.service';
 
 @NgModule({
   declarations: [NgxBannerComponent],
+  entryComponents: [NgxBannerComponent],
+  imports: [],
   providers: [NgxBannerService],
-  imports: [
-  ],
   exports: [NgxBannerComponent]
 })
 export class NgxBannerModule { }

@@ -1,6 +1,24 @@
 {
   "name": "ngx-banner",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "Easy to use module for display info/warning/danger banner on the top of the screen.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arel0ve/ngx-banner.git"
+  },
+  "keywords": [
+    "banner",
+    "info-banner",
+    "ngx-banner",
+    "angular"
+  ],
+  "author": "Valerii Psol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arel0ve/ngx-banner/issues"
+  },
+  "homepage": "https://github.com/arel0ve/ngx-banner#readme",
+  "main": "index.ts",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
