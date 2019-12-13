@@ -1,0 +1,12 @@
+<div class="banner-wrapper"
+     [class.danger]="config.type === 'danger'"
+     [class.warning]="config.type === 'warning'"
+     [class.info]="config.type === 'info'">
+  <div class="banner-text">
+    <i class="fas banner-sign"
+       [class.fa-exclamation-circle]="config.type === 'danger'"
+       [class.fa-exclamation-triangle]="config.type === 'warning'"
+       [class.fa-info-circle]="config.type === 'info'"></i>
+    <span>{{ config.title }}</span>
+  </div>
+</div>

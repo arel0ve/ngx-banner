@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-banner": [
+        "dist/ngx-banner"
+      ],
+      "ngx-banner/*": [
+        "dist/ngx-banner/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
