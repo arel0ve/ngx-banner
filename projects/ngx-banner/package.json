@@ -1,6 +1,6 @@
 {
   "name": "ngx-banner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Easy to use module for display info/warning/danger banner on the top of the screen.",
   "repository": {
     "type": "git",

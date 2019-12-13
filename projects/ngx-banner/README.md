@@ -54,4 +54,4 @@ Using inside target component (everywhere, ngxBannerService should be declared i
 For now showBanner method has simple configuration:
 1. `type: 'info' | 'warning' | 'danger'`: banner style: `*info means blue*, *warning means yellow*, *danger means red*.' 
 2. `tilte: string`: text that will be displays on banner.
-3. `debounceTime: number`: time in *ms*, after which banner will be hidden.
+3. `debounceTime?: number`: time in *ms*, after which banner will be hidden. This parameter is optional, default value is `3000`.
